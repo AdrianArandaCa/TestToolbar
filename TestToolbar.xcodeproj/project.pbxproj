@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F9F4F3029D985BA0036051C /* Highlighter in Frameworks */ = {isa = PBXBuildFile; productRef = 1F9F4F2F29D985BA0036051C /* Highlighter */; };
 		1FEAE02F29D82EDC0089BD89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEAE02E29D82EDC0089BD89 /* AppDelegate.swift */; };
 		1FEAE03129D82EDC0089BD89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEAE03029D82EDC0089BD89 /* SceneDelegate.swift */; };
 		1FEAE03329D82EDC0089BD89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEAE03229D82EDC0089BD89 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F9F4F3029D985BA0036051C /* Highlighter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = TestToolbar;
+			packageProductDependencies = (
+				1F9F4F2F29D985BA0036051C /* Highlighter */,
+			);
 			productName = TestToolbar;
 			productReference = 1FEAE02B29D82EDC0089BD89 /* TestToolbar.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 1FEAE02229D82EDC0089BD89;
+			packageReferences = (
+				1F9F4F2E29D985BA0036051C /* XCRemoteSwiftPackageReference "HighlighterSwift" */,
+			);
 			productRefGroup = 1FEAE02C29D82EDC0089BD89 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -356,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1F9F4F2E29D985BA0036051C /* XCRemoteSwiftPackageReference "HighlighterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/smittytone/HighlighterSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1F9F4F2F29D985BA0036051C /* Highlighter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F9F4F2E29D985BA0036051C /* XCRemoteSwiftPackageReference "HighlighterSwift" */;
+			productName = Highlighter;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1FEAE02329D82EDC0089BD89 /* Project object */;
 }

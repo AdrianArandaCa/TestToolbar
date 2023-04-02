@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Highlighter
+
 enum FontStyle {
     //    case underlined
     case italic
@@ -38,6 +40,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var containerTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let highlighter = Highlighter()
+        highlighter?.setTheme("srcery", withFont: "HelveticaNeue-Bold", ofSize: 20.0)
+        if let displayString: NSAttributedString = highlighter?.highlight(containerTextView.text, as: "md") {
+            containerTextView.attributedText = displayString
+        }
         
         let boldButton = UIBarButtonItem(title: "Bold", style: .done, target: self, action: #selector(self.boldButtonPressed))
         let italicButton = UIBarButtonItem(title: "Italic", style: .done, target: self, action: #selector(self.italicButtonPressed))
@@ -178,6 +185,13 @@ class ViewController: UIViewController {
             // Seleccionar el rango de texto con los asteriscos incluidos
             textView.selectedRange = newSelectedRange
             containerTextView = textView
+            if let highlighter: Highlighter = Highlighter.init() {
+                highlighter.setTheme("srcery", withFont: "HelveticaNeue-Bold", ofSize: 20.0)
+                if let displayString: NSAttributedString = highlighter.highlight(containerTextView.text, as: "md") {
+                    containerTextView.attributedText = displayString
+                    
+                }
+            }
         }
     }
 }
